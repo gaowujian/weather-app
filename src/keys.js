@@ -1,0 +1,2 @@
+export const WEATHER_API_KEY="6a834f81674246d5bbb93637190108"
+export const NEWS_API_KEY="ca1cc463ddcd43939022f3aad58b9252"
