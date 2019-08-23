@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 
 import styled from "styled-components"
-import WeatherDetail from "./WeatherDetail"
-import City from "./City"
+import WeatherDetail from "../../components/WeatherDetail"
+import City from "../../components/City"
 import { connect } from "react-redux"
-import { getCurrentWeather } from "./store/actionCreators"
+import { getCurrentWeather } from "../../actions"
 
 const Wrapper = styled.div`
   background: green;

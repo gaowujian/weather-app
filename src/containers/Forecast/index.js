@@ -2,20 +2,21 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { Wrapper } from "./styles";
-import ForecastCard from "./ForecastCard";
+import ForecastCard from "../../components/ForecastCard";
 
-import { getWeatherForecast } from "./store/actionCreators";
+import { getWeatherForecast } from "../../actions";
+
+
+
+
 
 class Forecast extends React.Component {
   componentDidMount() {
     this.props.getForecast();
-    console.log("dd")
   }
 
   render() {
     const { isFetched, data } = this.props.forecasts;
-    console.log(isFetched,data)
-  
     return (
       <Wrapper>
         {isFetched&&
