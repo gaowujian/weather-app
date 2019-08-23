@@ -3,7 +3,7 @@ import { WEATHER_CURRENT_ENDPOINT,NEWS_TOP_HEADLINE_ENDPOINT,WEATHER_FORECAST_EN
 import { WEATHER_API_KEY,NEWS_API_KEY } from "../config/keys"
 const city = "Sydney"
 
-// https://api.apixu.com/v1/current.json?key=6a834f81674246d5bbb93637190108&q=Paris
+
 export const getCurrentWeather = (dispatch) => {
   return fetch(`${WEATHER_CURRENT_ENDPOINT}?key=${WEATHER_API_KEY}&q=${city}}`)
     .then((res) => res.json())
