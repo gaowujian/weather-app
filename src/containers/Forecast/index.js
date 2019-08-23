@@ -22,11 +22,11 @@ class Forecast extends React.Component {
         {isFetched&&
           data.map(forecast => (
             <ForecastCard
-              key={forecast.date_epoch}
-              weekday={forecast.date}
-              iconSrc={forecast.day.condition.icon}
-              temp={forecast.day.avgtemp_c}
-              desc={forecast.day.condition.text}
+              key={forecast.weekday}
+              weekday={forecast.weekday}
+              iconSrc={forecast.iconSrc}
+              temp={forecast.temp}
+              desc={forecast.desc}
             />
           ))}
       </Wrapper>

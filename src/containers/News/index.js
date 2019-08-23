@@ -14,18 +14,17 @@ class News extends React.Component {
 
   render() {
     const { isFetched, data } = this.props.news;
-    // console.log(isFetched,data)
   
     return (
       <Wrapper>
         {isFetched&&
           data.map(news => (
             <NewsCard
-              key={news.url}
+              key={news.title}
               title={news.title}
-              content={news.content}
-              publishedAt={news.publishedAt}
-              author={news.author}
+              description={news.description}
+              url={news.url}
+              urlToImage={news.urlToImage}
             />
           ))}
       </Wrapper>

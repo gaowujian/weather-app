@@ -1,21 +1,15 @@
-import React from "react";
-import {
-  Wrapper,
-  Title,
-  Content,
-  PublishedDate,
-  Author
-} from "./styles";
+import React from "react"
+import { Wrapper, Title, Description, Image, ReadMore } from "./styles"
 
-const Newscard = ({title, content, publishedAt, author}) => {
+const Newscard = ({ title, description, url, urlToImage }) => {
   return (
     <Wrapper>
       <Title>Title: {title}</Title>
-      <Content>Content: {content}</Content>
-      <PublishedDate>Date: {publishedAt}</PublishedDate>
-      <Author>Author: {author}</Author>
+      <Description>Description: {description}</Description>
+      <Image src={urlToImage} />
+      <ReadMore href={url}>Read More</ReadMore>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Newscard;
+export default Newscard

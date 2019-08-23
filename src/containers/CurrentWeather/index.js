@@ -19,6 +19,7 @@ class CurrentWeather extends Component {
     const { isFetched, data } = this.props.current
     return (
       <Wrapper>
+        {isFetched && <City name={data.name} />}
         {isFetched && (
             <WeatherDetail
               temp={data.temp}
@@ -27,7 +28,6 @@ class CurrentWeather extends Component {
               windSpeed={data.windSpeed}
             />
           ) }
-        {isFetched && <City name={data.name} />}
       </Wrapper>
     )
   }

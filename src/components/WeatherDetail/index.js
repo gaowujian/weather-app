@@ -4,12 +4,18 @@ import React from "react"
 function WeatherDetail({temp,weatherDes,humidity,windSpeed}) {
   return (
     <div className="left">
-      <p>
+      <h1>
         {temp}<sup>°</sup>
-      </p>
+      </h1>
       <p>{weatherDes}</p>
-      <span>Humidity {humidity}%</span>
-      <span>Wind {windSpeed} K/M</span>
+      <div>
+        <h2>Humidity</h2>
+        <p>{humidity}</p>
+      </div>
+      <div>
+        <h2>Wind</h2>
+        <p>{windSpeed} K/M</p>
+      </div>
     </div>
   )
 }

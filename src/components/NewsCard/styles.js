@@ -5,6 +5,6 @@ export const Wrapper = styled.div`
   margin:20px;
 `
 export const Title = styled.p``
-export const Content = styled.p``
-export const PublishedDate = styled.p``
-export const Author = styled.p``
+export const Description = styled.p``
+export const Image = styled.img``
+export const ReadMore = styled.a``
