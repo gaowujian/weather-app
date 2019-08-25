@@ -1,5 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  background: lightblue;
+  display: flex;
+  justfy-content: center;
+  align-items: center;
+  background-color: lightpink;
 `

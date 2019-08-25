@@ -1,14 +1,12 @@
 import React, { Component } from "react"
 
-import styled from "styled-components"
+
 import WeatherDetail from "../../components/WeatherDetail"
 import City from "../../components/City"
 import { connect } from "react-redux"
 import { getCurrentWeather } from "../../actions"
+import {Wrapper} from "./styles"
 
-const Wrapper = styled.div`
-  background: lightgreen;
-`
 
 class CurrentWeather extends Component {
   componentDidMount() {
@@ -19,15 +17,15 @@ class CurrentWeather extends Component {
     const { isFetched, data } = this.props.current
     return (
       <Wrapper>
-        {isFetched && <City name={data.name} />}
+        {isFetched && <City />}
         {isFetched && (
-            <WeatherDetail
-              temp={data.temp}
-              weatherDes={data.weatherDes}
-              humidity={data.humidity}
-              windSpeed={data.windSpeed}
-            />
-          ) }
+          <WeatherDetail
+            temp={data.temp}
+            weatherDes={data.weatherDes}
+            humidity={data.humidity}
+            windSpeed={data.windSpeed}
+          />
+        )}
       </Wrapper>
     )
   }

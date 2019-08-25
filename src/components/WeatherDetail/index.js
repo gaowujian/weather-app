@@ -1,21 +1,27 @@
 import React from "react"
 
+import { Row, Col } from "antd"
+import { Temperature, WeatherDes } from "./styles"
 
-function WeatherDetail({temp,weatherDes,humidity,windSpeed}) {
+function WeatherDetail({ temp, weatherDes, humidity, windSpeed }) {
   return (
     <div className="left">
-      <h1>
-        {temp}<sup>°</sup>
-      </h1>
-      <p>{weatherDes}</p>
-      <div>
-        <h2>Humidity</h2>
-        <p>{humidity}</p>
-      </div>
-      <div>
-        <h2>Wind</h2>
-        <p>{windSpeed} K/M</p>
-      </div>
+      <Temperature>
+        {temp}
+        <sup>°</sup>
+      </Temperature>
+
+      <WeatherDes>{weatherDes}</WeatherDes>
+      <Row>
+        <Col span={12} type="flex" justify="center" align="center">
+          <h2>Humidity</h2>
+          <span>{humidity}</span>
+        </Col>
+        <Col span={12} type="flex" justify="center" align="center">
+          <h2>Wind</h2>
+          <span>{windSpeed} K/M</span>
+        </Col>
+      </Row>
     </div>
   )
 }

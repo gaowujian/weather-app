@@ -63,9 +63,10 @@ export const getWeatherForecast = async (dispatch, getState) => {
   })
 }
 
-const country = "au"
+
 
 export const getNews = async (dispatch) => {
+  const country = "au"
   const response = await axios.get(
     `${NEWS_TOP_HEADLINE_ENDPOINT}?country=${country}&apiKey=${NEWS_API_KEY}`
   )

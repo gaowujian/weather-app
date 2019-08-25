@@ -9,7 +9,7 @@ function App() {
     <div id="weather-app">
       <CurrentWeather />
       <Forecast />
-      <News />
+      <News/>
     </div>
   );
 }
