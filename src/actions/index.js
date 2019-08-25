@@ -6,75 +6,75 @@ import {
 } from "../endPoints"
 import { WEATHER_API_KEY, NEWS_API_KEY } from "../config/keys"
 import { parseISO, format } from "date-fns"
-const city = "Sydney"
+import axios from "axios"
 
-export const getCurrentWeather = (dispatch) => {
-  return fetch(`${WEATHER_CURRENT_ENDPOINT}?key=${WEATHER_API_KEY}&q=${city}}`)
-    .then((res) => res.json())
-    .then((data) => {
-      const {
-        location: { name },
-        current: {
-          temp_c: temp,
-          humidity,
-          wind_kph: windSpeed,
-          condition: { text: weatherDes }
-        }
-      } = data
-      dispatch({
-        type: GET_CURRENT,
-        payload: { name, temp, weatherDes, humidity, windSpeed }
-      })
-    })
+export const getCurrentWeather = async (dispatch, getState) => {
+  const state = getState()
+  const currentCity = state.currentWeatherReducer.currentCity
+    ? state.currentWeatherReducer.currentCity
+    : "Sydney"
+
+  const response = await axios.get(
+    `${WEATHER_CURRENT_ENDPOINT}?key=${WEATHER_API_KEY}&q=${currentCity}}`
+  )
+  const {
+    location: { name },
+    current: {
+      temp_c: temp,
+      humidity,
+      wind_kph: windSpeed,
+      condition: { text: weatherDes }
+    }
+  } = response.data
+  dispatch({
+    type: GET_CURRENT,
+    payload: { name, temp, weatherDes, humidity, windSpeed }
+  })
 }
 
-const days = 6
-export const getWeatherForecast = (dispatch) => {
-  return fetch(
-    `${WEATHER_FORECAST_ENDPOINT}?key=${WEATHER_API_KEY}&q=${city}&days=${days}`
+export const getWeatherForecast = async (dispatch, getState) => {
+  const state = getState()
+  const currentCity = state.currentWeatherReducer.currentCity
+    ? state.currentWeatherReducer.currentCity
+    : "Sydney"
+  const days = 6
+  const response = await axios.get(
+    `${WEATHER_FORECAST_ENDPOINT}?key=${WEATHER_API_KEY}&q=${currentCity}&days=${days}`
   )
-    .then((res) => res.json())
-    .then((data) => {
-      const {
-        forecast: { forecastday: list }
-      } = data
-      const forecasts = list.slice(1, days).map((item) => {
-        const {
-          date,
-          day: {
-            condition: { icon: iconSrc, text: desc },
-            avgtemp_c: temp
-          }
-        } = item
-        const weekdayObj = parseISO(date)
-        const weekday = format(weekdayObj, "iii")
-        return { weekday, iconSrc, temp, desc }
-      })
-      dispatch({
-        type: GET_FORECAST,
-        payload: forecasts
-      })
-    })
+
+  const {
+    forecast: { forecastday: list }
+  } = response.data
+  const forecasts = list.slice(1, days).map((item) => {
+    const {
+      date,
+      day: {
+        condition: { icon: iconSrc, text: desc },
+        avgtemp_c: temp
+      }
+    } = item
+    const weekdayObj = parseISO(date)
+    const weekday = format(weekdayObj, "iii")
+    return { weekday, iconSrc, temp, desc }
+  })
+  dispatch({
+    type: GET_FORECAST,
+    payload: forecasts
+  })
 }
 
 const country = "au"
 
-export const getNews = (dispatch) => {
-  return fetch(
+export const getNews = async (dispatch) => {
+  const response = await axios.get(
     `${NEWS_TOP_HEADLINE_ENDPOINT}?country=${country}&apiKey=${NEWS_API_KEY}`
   )
-    .then((res) => res.json())
-    .then((data) => {
-      // get the first 5 news
-      const news = data.articles.slice(0, 5).map((item) => {
-        // console.log(item)
-        const {title,description,url,urlToImage} = item
-        console.log(title,description,url,urlToImage)
-        return ({title,description,url,urlToImage})
-      })
-      dispatch({
-        type: GET_NEWS,
-        payload: news
-      })
-    })
+  const news = response.data.articles.slice(0, 5).map((item) => {
+    const { title, description, url, urlToImage } = item
+    return { title, description, url, urlToImage }
+  })
+  dispatch({
+    type: GET_NEWS,
+    payload: news
+  })
 }

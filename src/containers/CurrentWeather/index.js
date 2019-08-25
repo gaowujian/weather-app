@@ -7,7 +7,7 @@ import { connect } from "react-redux"
 import { getCurrentWeather } from "../../actions"
 
 const Wrapper = styled.div`
-  background: green;
+  background: lightgreen;
 `
 
 class CurrentWeather extends Component {

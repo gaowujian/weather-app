@@ -6,8 +6,10 @@ const Newscard = ({ title, description, url, urlToImage }) => {
     <Wrapper>
       <Title>Title: {title}</Title>
       <Description>Description: {description}</Description>
-      <Image src={urlToImage} />
-      <ReadMore href={url}>Read More</ReadMore>
+      <Image src={urlToImage} alt="img"/>
+      <ReadMore >
+        <a href={url}>Read More</a>
+      </ReadMore>
     </Wrapper>
   )
 }
