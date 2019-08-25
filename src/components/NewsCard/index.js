@@ -5,9 +5,13 @@ const Newscard = ({ title, description, url, urlToImage }) => {
   return (
     <Wrapper>
       <Title>Title: {title}</Title>
-      <Description>Description: {description}</Description>
-      <Image src={urlToImage} alt="img"/>
-      <ReadMore >
+      <Description>{description}</Description>
+      {urlToImage ? (
+        <Image>
+          <img src={urlToImage} alt="Loading"></img>
+        </Image>
+      ) : null}
+      <ReadMore>
         <a href={url}>Read More</a>
       </ReadMore>
     </Wrapper>
