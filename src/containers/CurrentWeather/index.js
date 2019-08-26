@@ -1,11 +1,10 @@
 import React, { Component } from "react"
 
-
 import WeatherDetail from "../../components/WeatherDetail"
 import City from "../../components/City"
 import { connect } from "react-redux"
 import { getCurrentWeather } from "../../actions"
-import {Wrapper} from "./styles"
+import { Wrapper } from "./styles"
 
 
 class CurrentWeather extends Component {
@@ -18,14 +17,7 @@ class CurrentWeather extends Component {
     return (
       <Wrapper>
         {isFetched && <City />}
-        {isFetched && (
-          <WeatherDetail
-            temp={data.temp}
-            weatherDes={data.weatherDes}
-            humidity={data.humidity}
-            windSpeed={data.windSpeed}
-          />
-        )}
+        {isFetched && <WeatherDetail temp={data.temp} weatherDes={data.weatherDes} humidity={data.humidity} windSpeed={data.windSpeed} />}
       </Wrapper>
     )
   }

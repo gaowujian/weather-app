@@ -1,47 +1,39 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
-import { Wrapper } from "./styles";
-import NewsCard from "../../components/NewsCard";
+import { Wrapper } from "./styles"
+import NewsCard from "../../components/NewsCard"
 
-import { getNews } from "../../actions";
+import { getNews } from "../../actions"
 
 class News extends React.Component {
   componentDidMount() {
-    this.props.getNews();
-  
+    this.props.getNews()
   }
 
   render() {
-    const { isFetched, data } = this.props.news;
-  
+    const { isFetched, data } = this.props.news
+
     return (
-      <Wrapper>
-        {isFetched&&
-          data.map(news => (
-            <NewsCard
-              key={news.title}
-              title={news.title}
-              description={news.description}
-              url={news.url}
-              urlToImage={news.urlToImage}
-            />
+      <Wrapper className="news">
+        {isFetched &&
+          data.map((news) => (
+            <NewsCard key={news.title} title={news.title} description={news.description} url={news.url} urlToImage={news.urlToImage} />
           ))}
       </Wrapper>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   news: state.newsReducer
-});
+})
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   getNews: () => dispatch(getNews)
-});
+})
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(News);
-
+)(News)

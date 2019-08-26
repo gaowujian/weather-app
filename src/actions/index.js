@@ -1,22 +1,14 @@
 import { GET_CURRENT, GET_FORECAST, GET_NEWS } from "../constants/actionTypes"
-import {
-  WEATHER_CURRENT_ENDPOINT,
-  NEWS_TOP_HEADLINE_ENDPOINT,
-  WEATHER_FORECAST_ENDPOINT
-} from "../endPoints"
+import { WEATHER_CURRENT_ENDPOINT, NEWS_TOP_HEADLINE_ENDPOINT, WEATHER_FORECAST_ENDPOINT } from "../endPoints"
 import { WEATHER_API_KEY, NEWS_API_KEY } from "../config/keys"
 import { parseISO, format } from "date-fns"
 import axios from "axios"
 
 export const getCurrentWeather = async (dispatch, getState) => {
   const state = getState()
-  const currentCity = state.currentWeatherReducer.currentCity
-    ? state.currentWeatherReducer.currentCity
-    : "Sydney"
+  const currentCity = state.currentWeatherReducer.currentCity ? state.currentWeatherReducer.currentCity : "Sydney"
 
-  const response = await axios.get(
-    `${WEATHER_CURRENT_ENDPOINT}?key=${WEATHER_API_KEY}&q=${currentCity}}`
-  )
+  const response = await axios.get(`${WEATHER_CURRENT_ENDPOINT}?key=${WEATHER_API_KEY}&q=${currentCity}}`)
   const {
     location: { name },
     current: {
@@ -34,13 +26,9 @@ export const getCurrentWeather = async (dispatch, getState) => {
 
 export const getWeatherForecast = async (dispatch, getState) => {
   const state = getState()
-  const currentCity = state.currentWeatherReducer.currentCity
-    ? state.currentWeatherReducer.currentCity
-    : "Sydney"
+  const currentCity = state.currentWeatherReducer.currentCity ? state.currentWeatherReducer.currentCity : "Sydney"
   const days = 6
-  const response = await axios.get(
-    `${WEATHER_FORECAST_ENDPOINT}?key=${WEATHER_API_KEY}&q=${currentCity}&days=${days}`
-  )
+  const response = await axios.get(`${WEATHER_FORECAST_ENDPOINT}?key=${WEATHER_API_KEY}&q=${currentCity}&days=${days}`)
 
   const {
     forecast: { forecastday: list }
@@ -63,13 +51,9 @@ export const getWeatherForecast = async (dispatch, getState) => {
   })
 }
 
-
-
 export const getNews = async (dispatch) => {
   const country = "au"
-  const response = await axios.get(
-    `${NEWS_TOP_HEADLINE_ENDPOINT}?country=${country}&apiKey=${NEWS_API_KEY}`
-  )
+  const response = await axios.get(`${NEWS_TOP_HEADLINE_ENDPOINT}?country=${country}&apiKey=${NEWS_API_KEY}`)
   const news = response.data.articles.slice(0, 5).map((item) => {
     const { title, description, url, urlToImage } = item
     return { title, description, url, urlToImage }

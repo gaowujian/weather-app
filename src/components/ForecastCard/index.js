@@ -1,21 +1,17 @@
-import React from "react";
-import {
-  Wrapper,
-  Weekday,
-  WeatherIcon,
-  Temperature,
-  WeatherDesc
-} from "./styles";
+import React from "react"
+import { Wrapper, Weekday, WeatherIcon, Temperature, WeatherDesc } from "./styles"
 
-const ForecastCard = ({weekday, iconSrc, temp, desc}) => {
+const ForecastCard = ({ weekday, iconSrc, temp, desc }) => {
   return (
-    <Wrapper>
+    <Wrapper className="forecastCard">
       <Weekday>{weekday}</Weekday>
       <WeatherIcon src={iconSrc} />
-      <Temperature>{temp}<sup>°</sup></Temperature>
+      <Temperature>
+        {temp}
+        <sup>°</sup>
+      </Temperature>
       <WeatherDesc>{desc}</WeatherDesc>
     </Wrapper>
-  );
-};
-
-export default ForecastCard;
+  )
+}
+export default ForecastCard

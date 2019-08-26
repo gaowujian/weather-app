@@ -3,7 +3,7 @@ import { Wrapper, Title, Description, Image, ReadMore } from "./styles"
 
 const Newscard = ({ title, description, url, urlToImage }) => {
   return (
-    <Wrapper>
+    <Wrapper className="newsCard">
       <Title>Title: {title}</Title>
       <Description>{description}</Description>
       {urlToImage ? (

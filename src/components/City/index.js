@@ -20,9 +20,7 @@ function City(props) {
           style={{ width: 120 }}
           onChange={props.handleChange}
         >
-          <Option value="Sydney" >
-            Sydney
-          </Option>
+          <Option value="Sydney">Sydney</Option>
           <Option value="Melbourne">Melbourne</Option>
           <Option value="Canberra">Canberra</Option>
           <Option value="Perth">Perth</Option>
@@ -34,7 +32,7 @@ function City(props) {
 }
 
 const mapStateToProps = (state) => ({
-  current: state.currentWeatherReducer
+  current: state.currentWeatherReducer,
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -43,7 +41,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch({ type: CHANGE_CITY, data: value })
     dispatch(getCurrentWeather)
     dispatch(getWeatherForecast)
-  }
+  },
 })
 
 export default connect(

@@ -10,7 +10,6 @@ function WeatherDetail({ temp, weatherDes, humidity, windSpeed }) {
         {temp}
         <sup>°</sup>
       </Temperature>
-
       <WeatherDes>{weatherDes}</WeatherDes>
       <Row>
         <Col span={12} type="flex" justify="center" align="center">

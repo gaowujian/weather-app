@@ -1,26 +1,23 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
-import { Wrapper } from "./styles";
-import ForecastCard from "../../components/ForecastCard";
+import { Wrapper } from "./styles"
+import ForecastCard from "../../components/ForecastCard"
 
-import { getWeatherForecast } from "../../actions";
-
-
-
+import { getWeatherForecast } from "../../actions"
 
 
 class Forecast extends React.Component {
   componentDidMount() {
-    this.props.getForecast();
+    this.props.getForecast()
   }
 
   render() {
-    const { isFetched, data } = this.props.forecasts;
+    const { isFetched, data } = this.props.forecasts
     return (
-      <Wrapper>
-        {isFetched&&
-          data.map(forecast => (
+      <Wrapper className="forecast">
+        {isFetched &&
+          data.map((forecast) => (
             <ForecastCard
               key={forecast.weekday}
               weekday={forecast.weekday}
@@ -30,19 +27,19 @@ class Forecast extends React.Component {
             />
           ))}
       </Wrapper>
-    );
+    )
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   forecasts: state.forecastReducer
-});
+})
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   getForecast: () => dispatch(getWeatherForecast)
-});
+})
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Forecast);
+)(Forecast)
