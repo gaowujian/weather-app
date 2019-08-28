@@ -1,4 +1,4 @@
-import { GET_NEWS } from "../../constants/actionTypes"
+import { GET_NEWS } from "../constants/actionTypes"
 
 const initialState = {
   isFetched: false,

@@ -1,4 +1,4 @@
-import { GET_FORECAST } from "../../constants/actionTypes"
+import { GET_FORECAST } from "../constants/actionTypes"
 
 const initialState = {
   isFetched: false,

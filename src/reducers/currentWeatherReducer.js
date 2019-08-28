@@ -1,4 +1,4 @@
-import { GET_CURRENT, CHANGE_CITY } from "../../constants/actionTypes"
+import { GET_CURRENT, CHANGE_CITY } from "../constants/actionTypes"
 
 const initialState = {
   isFetched: false,
