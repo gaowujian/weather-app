@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 
 import { Wrapper } from "./styles"
-import NewsCard from "../../components/NewsCard"
+import NewsCard from "./NewsCard"
 
 import { getNews } from "../../actions"
 

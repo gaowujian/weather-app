@@ -2,7 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 
 import { Wrapper } from "./styles"
-import ForecastCard from "../../components/ForecastCard"
+import ForecastCard from "./ForecastCard"
 
 import { getWeatherForecast } from "../../actions"
 
@@ -19,7 +19,7 @@ class Forecast extends React.Component {
         {isFetched &&
           data.map((forecast) => (
             <ForecastCard
-              key={forecast.weekday}
+              key={forecast.timeStamp}
               weekday={forecast.weekday}
               iconSrc={forecast.iconSrc}
               temp={forecast.temp}

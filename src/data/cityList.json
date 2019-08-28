@@ -1,0 +1,556 @@
+[{
+  "id": 2147714,
+  "coord": {
+    "lon": 151.207321,
+    "lat": -33.867851
+  },
+  "country": "AU",
+  "geoname": {
+    "cl": "P",
+    "code": "PPLA",
+    "parent": 6619279
+  },
+  "name": "Sydney",
+  "stat": {
+    "level": 1.0,
+    "population": 1000000
+  },
+  "stations": [
+    {
+      "id": 8233,
+      "dist": 9,
+      "kf": 1
+    },
+    {
+      "id": 8788,
+      "dist": 34,
+      "kf": 1
+    },
+    {
+      "id": 29074,
+      "dist": 11,
+      "kf": 1
+    },
+    {
+      "id": 29173,
+      "dist": 33,
+      "kf": 1
+    },
+    {
+      "id": 29178,
+      "dist": 15,
+      "kf": 1
+    },
+    {
+      "id": 29216,
+      "dist": 24,
+      "kf": 1
+    },
+    {
+      "id": 30099,
+      "dist": 21,
+      "kf": 1
+    },
+    {
+      "id": 30783,
+      "dist": 10,
+      "kf": 1
+    },
+    {
+      "id": 30883,
+      "dist": 20,
+      "kf": 1
+    },
+    {
+      "id": 30913,
+      "dist": 7,
+      "kf": 1
+    },
+    {
+      "id": 30916,
+      "dist": 23,
+      "kf": 1
+    },
+    {
+      "id": 34675,
+      "dist": 20,
+      "kf": 1
+    },
+    {
+      "id": 35400,
+      "dist": 1,
+      "kf": 1
+    },
+    {
+      "id": 35406,
+      "dist": 28,
+      "kf": 1
+    },
+    {
+      "id": 35574,
+      "dist": 24,
+      "kf": 1
+    }
+  ],
+  "zoom": 1
+},
+{
+  "id": 2063523,
+  "coord": {
+    "lon": 115.833328,
+    "lat": -31.933331
+  },
+  "country": "AU",
+  "geoname": {
+    "cl": "P",
+    "code": "PPLA",
+    "parent": 7839478
+  },
+  "name": "Perth",
+  "stat": {
+    "level": 1.0,
+    "population": 1446704
+  },
+  "stations": [
+    {
+      "id": 8189,
+      "dist": 19,
+      "kf": 1
+    },
+    {
+      "id": 8221,
+      "dist": 12,
+      "kf": 1
+    },
+    {
+      "id": 29634,
+      "dist": 12,
+      "kf": 1
+    }
+  ],
+  "zoom": 1
+},
+{
+  "id": 2158177,
+  "coord": {
+    "lon": 144.963318,
+    "lat": -37.813999
+  },
+  "country": "AU",
+  "geoname": {
+    "cl": "P",
+    "code": "PPLA",
+    "parent": 7839805
+  },
+  "name": "Melbourne",
+  "stat": {
+    "level": 1.0,
+    "population": 15000
+  },
+  "stations": [
+    {
+      "id": 8201,
+      "dist": 18,
+      "kf": 1
+    },
+    {
+      "id": 28516,
+      "dist": 14,
+      "kf": 1
+    },
+    {
+      "id": 28902,
+      "dist": 16,
+      "kf": 1
+    },
+    {
+      "id": 31754,
+      "dist": 18,
+      "kf": 1
+    },
+    {
+      "id": 32534,
+      "dist": 14,
+      "kf": 1
+    },
+    {
+      "id": 33266,
+      "dist": 15,
+      "kf": 1
+    },
+    {
+      "id": 33854,
+      "dist": 14,
+      "kf": 1
+    },
+    {
+      "id": 35465,
+      "dist": 22,
+      "kf": 1
+    }
+  ],
+  "zoom": 5
+},
+{
+  "id": 2172517,
+  "coord": {
+    "lon": 149.128067,
+    "lat": -35.283459
+  },
+  "country": "AU",
+  "geoname": {
+    "cl": "P",
+    "code": "PPLC",
+    "parent": 2177478
+  },
+  "langs": [
+    {
+      "am": "ካንበራ"
+    },
+    {
+      "ar": "كانبرا"
+    },
+    {
+      "be": "Горад Канбера"
+    },
+    {
+      "bg": "Канбера"
+    },
+    {
+      "bn": "ক্যানবেরা"
+    },
+    {
+      "bo": "ཁན་པེ་ར།"
+    },
+    {
+      "bs": "Canberra"
+    },
+    {
+      "ca": "Canberra"
+    },
+    {
+      "cs": "Canberra"
+    },
+    {
+      "cu": "Канбє́ра"
+    },
+    {
+      "cv": "Канберра"
+    },
+    {
+      "da": "Canberra"
+    },
+    {
+      "de": "Canberra"
+    },
+    {
+      "el": "Καμπέρα"
+    },
+    {
+      "en": "Canberra"
+    },
+    {
+      "eo": "Kanbero"
+    },
+    {
+      "es": "Canberra"
+    },
+    {
+      "et": "Canberra"
+    },
+    {
+      "eu": "Canberra"
+    },
+    {
+      "fa": "کانبرا"
+    },
+    {
+      "fi": "Canberra"
+    },
+    {
+      "fr": "Canberra"
+    },
+    {
+      "frp": "Canberra"
+    },
+    {
+      "gd": "Canberra"
+    },
+    {
+      "he": "קנברה"
+    },
+    {
+      "hi": "कैनबरा"
+    },
+    {
+      "hr": "Canberra"
+    },
+    {
+      "ht": "Kanbera"
+    },
+    {
+      "hy": "Կանբեռա"
+    },
+    {
+      "id": "Canberra"
+    },
+    {
+      "io": "Canberra"
+    },
+    {
+      "is": "Canberra"
+    },
+    {
+      "it": "Canberra"
+    },
+    {
+      "ja": "キャンベラ"
+    },
+    {
+      "ka": "კანბერა"
+    },
+    {
+      "ko": "캔버라"
+    },
+    {
+      "ku": "Kanberra"
+    },
+    {
+      "la": "Canberra"
+    },
+    {
+      "link": "http://en.wikipedia.org/wiki/Canberra"
+    },
+    {
+      "lt": "Kanbera"
+    },
+    {
+      "lv": "Kanbera"
+    },
+    {
+      "mhr": "Канберра"
+    },
+    {
+      "mi": "Kānapera"
+    },
+    {
+      "mk": "Канбера"
+    },
+    {
+      "mn": "Канберра"
+    },
+    {
+      "mr": "कॅनबेरा"
+    },
+    {
+      "nl": "Canberra"
+    },
+    {
+      "nn": "Canberra"
+    },
+    {
+      "no": "Canberra"
+    },
+    {
+      "oc": "Canberra"
+    },
+    {
+      "os": "Канберрæ"
+    },
+    {
+      "pl": "Canberra"
+    },
+    {
+      "pnb": "کینبرا"
+    },
+    {
+      "pt": "Camberra"
+    },
+    {
+      "ru": "Канберра"
+    },
+    {
+      "sah": "Канберра"
+    },
+    {
+      "scn": "Canberra"
+    },
+    {
+      "sco": "Canberra"
+    },
+    {
+      "sh": "Canberra"
+    },
+    {
+      "sk": "Canberra"
+    },
+    {
+      "sl": "Canberra"
+    },
+    {
+      "so": "Kanbera"
+    },
+    {
+      "sr": "Канбера"
+    },
+    {
+      "sv": "Canberra"
+    },
+    {
+      "ta": "கான்பரா"
+    },
+    {
+      "tet": "Kamberra"
+    },
+    {
+      "tg": "Канберра"
+    },
+    {
+      "th": "แคนเบอร์รา"
+    },
+    {
+      "tpi": "Kambra"
+    },
+    {
+      "tr": "Kanberra"
+    },
+    {
+      "tt": "Канберра"
+    },
+    {
+      "ty": "Canberra"
+    },
+    {
+      "ug": "Kanbérra"
+    },
+    {
+      "uk": "Канберра"
+    },
+    {
+      "ur": "کینبرا"
+    },
+    {
+      "wuu": "坎培拉"
+    },
+    {
+      "yi": "קאנבערא"
+    },
+    {
+      "zh": "堪培拉"
+    }
+  ],
+  "name": "Canberra",
+  "stat": {
+    "level": 1.0,
+    "population": 327700
+  },
+  "stations": [
+    {
+      "id": 1688,
+      "dist": 43,
+      "kf": 1
+    },
+    {
+      "id": 8226,
+      "dist": 6,
+      "kf": 1
+    },
+    {
+      "id": 28901,
+      "dist": 10,
+      "kf": 1
+    },
+    {
+      "id": 29036,
+      "dist": 6,
+      "kf": 1
+    },
+    {
+      "id": 30597,
+      "dist": 12,
+      "kf": 1
+    },
+    {
+      "id": 30822,
+      "dist": 21,
+      "kf": 1
+    },
+    {
+      "id": 34112,
+      "dist": 10,
+      "kf": 1
+    },
+    {
+      "id": 35239,
+      "dist": 13,
+      "kf": 1
+    }
+  ],
+  "zoom": 7
+},
+{
+  "id": 2078025,
+  "coord": {
+    "lon": 138.600006,
+    "lat": -34.933331
+  },
+  "country": "AU",
+  "geoname": {
+    "cl": "P",
+    "code": "PPLA",
+    "parent": 7839465
+  },
+  "name": "Adelaide",
+  "stat": {
+    "level": 1.0,
+    "population": 1074159
+  },
+  "stations": [
+    {
+      "id": 8204,
+      "dist": 6,
+      "kf": 1
+    },
+    {
+      "id": 8811,
+      "dist": 6,
+      "kf": 1
+    },
+    {
+      "id": 9189,
+      "dist": 11,
+      "kf": 1
+    },
+    {
+      "id": 29032,
+      "dist": 17,
+      "kf": 1
+    },
+    {
+      "id": 29665,
+      "dist": 21,
+      "kf": 1
+    },
+    {
+      "id": 30678,
+      "dist": 4,
+      "kf": 1
+    },
+    {
+      "id": 31717,
+      "dist": 1,
+      "kf": 1
+    },
+    {
+      "id": 32332,
+      "dist": 15,
+      "kf": 1
+    },
+    {
+      "id": 33545,
+      "dist": 10,
+      "kf": 1
+    }
+  ],
+  "zoom": 5
+}]

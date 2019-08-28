@@ -1,23 +1,32 @@
 import React, { Component } from "react"
-
-import WeatherDetail from "../../components/WeatherDetail"
-import City from "../../components/City"
 import { connect } from "react-redux"
-import { getCurrentWeather } from "../../actions"
-import { Wrapper } from "./styles"
+import { getCurrentWeather, getWeatherForecast } from "../../actions"
+import { CHANGE_CITY } from "../../constants/actionTypes"
+import { Wrapper, City, WeatherCondition, Temperature, Weekday, MaxTemp, MinTemp } from "./styles"
 
-
+// name, temp, weatherDes,temp_max, temp_min, weekday
 class CurrentWeather extends Component {
   componentDidMount() {
     this.props.getCurrent()
   }
-
   render() {
     const { isFetched, data } = this.props.current
     return (
       <Wrapper>
-        {isFetched && <City />}
-        {isFetched && <WeatherDetail temp={data.temp} weatherDes={data.weatherDes} humidity={data.humidity} windSpeed={data.windSpeed} />}
+        <City>{isFetched ? data.name : ""}</City>
+        <WeatherCondition>{isFetched ? data.weatherDes : ""}</WeatherCondition>
+        <Temperature>{isFetched ? data.temp : ""}</Temperature>
+        <select defaultValue="Sydney" style={{ width: 120 }} onChange={this.props.changeCity}>
+          <option value="2147714">Sydney</option>
+          <option value="2158177">Melbourne</option>
+          <option value="2172517">Canberra</option>
+          <option value="2063523">Perth</option>
+          <option value="2078025">Adelaide</option>
+        </select>
+        <Weekday>{isFetched ? data.weekday : ""}</Weekday>
+        <span>Today</span>
+        <MaxTemp>{isFetched ? data.temp_max : ""}</MaxTemp>
+        <MinTemp>{isFetched ? data.temp_min : ""}</MinTemp>
       </Wrapper>
     )
   }
@@ -28,7 +37,12 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  getCurrent: () => dispatch(getCurrentWeather)
+  getCurrent: () => dispatch(getCurrentWeather),
+  changeCity: (e) => {
+    dispatch({ type: CHANGE_CITY, data: e.target.value })
+    dispatch(getCurrentWeather)
+    dispatch(getWeatherForecast)
+  }
 })
 
 export default connect(
