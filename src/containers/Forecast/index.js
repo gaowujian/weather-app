@@ -9,7 +9,7 @@ import { getWeatherForecast } from "../../actions"
 
 class Forecast extends React.Component {
   componentDidMount() {
-    this.props.getForecast()
+    // this.props.getForecast()
   }
 
   render() {

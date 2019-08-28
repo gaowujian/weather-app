@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  background: lightblue;
+  background: lightpink;
   padding: 5px 0;
 `
 export const Title = styled.h2`

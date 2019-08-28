@@ -1,4 +1,4 @@
-import { GET_CURRENT, GET_FORECAST, GET_NEWS, CHANGE_CITY } from "../constants/actionTypes"
+import { GET_CURRENT, GET_FORECAST, GET_NEWS } from "../constants/actionTypes"
 import { WEATHER_CURRENT_ENDPOINT, NEWS_TOP_HEADLINE_ENDPOINT, WEATHER_FORECAST_ENDPOINT } from "../endPoints"
 import { WEATHER_API_KEY, NEWS_API_KEY } from "../config/keys"
 import { fromUnixTime, format } from 'date-fns'
@@ -35,7 +35,6 @@ export const getWeatherForecast = async (dispatch, getState) => {
   const state = getState()
   const currentCityId = state.currentWeatherReducer.currentCityId ? state.currentWeatherReducer.currentCityId : "2147714"
   const response = await axios.get(`${WEATHER_FORECAST_ENDPOINT}?id=${currentCityId}&appid=${WEATHER_API_KEY}`)
-  console.log(response.data)
   const rawDataList = response.data.list
   const forecasts = dataShaper(rawDataList)
   dispatch({

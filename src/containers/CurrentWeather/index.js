@@ -7,7 +7,7 @@ import { Wrapper, City, WeatherCondition, Temperature, Weekday, MaxTemp, MinTemp
 // name, temp, weatherDes,temp_max, temp_min, weekday
 class CurrentWeather extends Component {
   componentDidMount() {
-    this.props.getCurrent()
+    // this.props.getCurrent()
   }
   render() {
     const { isFetched, data } = this.props.current

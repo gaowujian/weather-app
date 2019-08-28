@@ -8,7 +8,7 @@ import { getNews } from "../../actions"
 
 class News extends React.Component {
   componentDidMount() {
-    this.props.getNews()
+    // this.props.getNews()
   }
 
   render() {

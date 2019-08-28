@@ -9,14 +9,15 @@ export default (arr)=>{
       main: { temp},
       weather: [{ main: desc, icon }],
       dt
-    } =  array.head(item)
+    } =  array.nth(item,3)
     const timezone = 36000
     const timeStamp = dt + timezone;
     const weekday = format(fromUnixTime(timeStamp), "iiii")
     temp = Number(temp - 273.15).toFixed(0)
-
-   return { timeStamp, weekday, icon, temp, desc }
+    
+    const iconSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`
+   return { timeStamp, weekday, iconSrc, temp, desc }
    })
-  console.log(resultList)
+
   return resultList;
 }
