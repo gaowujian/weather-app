@@ -3,7 +3,7 @@ import { Wrapper, Weekday, WeatherIcon, Temperature, WeatherDesc } from "./style
 
 const ForecastCard = ({ weekday, iconSrc, temp, desc }) => {
   return (
-    <Wrapper className="forecastCard">
+    <Wrapper>
       <Weekday>{weekday}</Weekday>
       <WeatherIcon src={iconSrc} />
       <Temperature>

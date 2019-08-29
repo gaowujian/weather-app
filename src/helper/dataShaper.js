@@ -14,6 +14,7 @@ export default (arr)=>{
     const timeStamp = dt + timezone;
     const weekday = format(fromUnixTime(timeStamp), "iiii")
     temp = Number(temp - 273.15).toFixed(0)
+    icon = String(icon).replace("n","d")
     
     const iconSrc = `http://openweathermap.org/img/wn/${icon}@2x.png`
    return { timeStamp, weekday, iconSrc, temp, desc }
