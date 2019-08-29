@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import CurrentWeather from "./containers/CurrentWeather"
 export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
@@ -18,6 +19,7 @@ export const Wrapper = styled.div`
     max-width: 1140px;
   }
 `
+
 export const Row = styled.div`
   display: flex;
   flex-direction: column;

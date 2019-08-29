@@ -8,7 +8,7 @@ const ForecastCard = ({ weekday, iconSrc, temp, desc }) => {
       <WeatherIcon src={iconSrc} />
       <Temperature>
         {temp}
-        <sup>°</sup>
+        <sup>°</sup>C
       </Temperature>
       <WeatherDesc>{desc}</WeatherDesc>
     </Wrapper>
