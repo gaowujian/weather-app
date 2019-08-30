@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to deploy the app to Github pages?
+https://medium.com/@_mariacheline/deploy-create-react-app-project-to-github-pages-2eb6deda5b89
+
+Process of updating changes to GitHub pages
+git add .
+git commit -m "message"
+npm run predeploy
+npm run deploy
+
 ## Available Scripts
 
 In the project directory, you can run:

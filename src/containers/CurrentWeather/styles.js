@@ -10,12 +10,18 @@ export const Wrapper = styled.div`
     div {
       margin: 10px;
     }
+    img {
+      max-width: 30px;
+    }
   }
   @media (min-width: 576px) {
     .vertical {
       display: flex;
       flex-flow: column;
       align-items: center;
+      img {
+        max-width: initial;
+      }
     }
   }
   .horizontal {
@@ -32,9 +38,7 @@ export const City = styled.h1`
 `
 export const WeatherCondition = styled.p``
 export const Temperature = styled.p``
-export const Icon = styled.img`
-  max-width: 30px;
-`
+export const Icon = styled.img``
 export const Weekday = styled.span`
   margin: 5px;
 `
