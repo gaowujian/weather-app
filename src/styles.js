@@ -23,7 +23,7 @@ export const Row = styled.div`
   display: flex;
   flex-direction: column;
   overflow: overlay;
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     flex-direction: row-reverse;
     & > div:nth-child(2) {
       flex: 1 1 40%;
