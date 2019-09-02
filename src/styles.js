@@ -25,6 +25,7 @@ export const Row = styled.div`
   overflow: overlay;
   @media (min-width: 576px) {
     flex-direction: row-reverse;
+    min-height:580px;
     & > div:nth-child(2) {
       flex: 1 1 40%;
       overflow: overlay;
@@ -37,7 +38,7 @@ export const Row = styled.div`
         display: flex;
         flex-flow: column;
         flex: 1;
-        min-height:580px;
+
         justify-content:space-around;
         & > img {
           width: 80%;
