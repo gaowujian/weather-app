@@ -1,7 +1,8 @@
 import styled from "styled-components"
 export const Wrapper = styled.div`
-  background-color: lightyellow;
-
+  background-image:url("https://images.pexels.com/photos/2876652/pexels-photo-2876652.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  margin: 20px 0;
+  border-radius: 5px;
   .vertical {
     display: flex;
     flex-flow: row;
@@ -35,6 +36,11 @@ export const Wrapper = styled.div`
 `
 export const City = styled.h1`
   margin: 0.5em;
+`
+export const SelectCity = styled.select`
+  & > option:hover{
+    transform:scale(1.5)
+  }
 `
 export const WeatherCondition = styled.p``
 export const Temperature = styled.p``

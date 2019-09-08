@@ -1,16 +1,26 @@
 import React from "react"
-import { Wrapper, Title, Description, Image, ReadMore } from "./styles"
-
+import "./style.scss"
+import "./toggle"
 const Newscard = ({ title, description, url, urlToImage }) => {
+  
   return (
-    <Wrapper className="newsCard">
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      {urlToImage && <Image src={urlToImage} alt="Loading"></Image>}
-      <ReadMore>
-        <a href={url}>Read More</a>
-      </ReadMore>
-    </Wrapper>
+    <div className="news-card">
+      <div className="thumbnail">
+        {urlToImage && <img src={urlToImage} alt="Loading"></img>}
+        {urlToImage && <div className="category">Photos</div>}
+      </div>
+
+      <div className="post-content">
+        <h2 className="title">{title}</h2>
+        <p className="description">{description}</p>
+        <div className="post-meta">
+          <span className="comments">
+            <i className="fa fa-comments"></i>
+            <a href={url}>Read More</a>
+          </span>
+        </div>
+      </div>
+    </div>
   )
 }
 

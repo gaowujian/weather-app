@@ -46,6 +46,7 @@ export const getWeatherForecast = async (dispatch, getState) => {
     payload: forecasts
   })
 }
+//  api format: https://newsapi.org/v2/top-headlines?country=au&apiKey=ca1cc463ddcd43939022f3aad58b9252
 
 export const getNews = async (dispatch) => {
   const country = "au"
