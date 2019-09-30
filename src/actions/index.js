@@ -52,7 +52,7 @@ export const getNews = async (dispatch) => {
   const country = "au"
   const response = await axios.get(`${NEWS_TOP_HEADLINE_ENDPOINT}?country=${country}&apiKey=${NEWS_API_KEY}`)
   const news = response.data.articles.slice(0, 5).map((item) => {
-    const { title, description, url, urlToImage } = item
+    let { title, description, url, urlToImage } = item
     return { title, description, url, urlToImage }
   })
   dispatch({
